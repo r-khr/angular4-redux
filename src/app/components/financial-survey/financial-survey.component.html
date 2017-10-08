@@ -1,0 +1,9 @@
+<div class="flex flex-column">
+  <app-financial-section 
+    name="Items"
+    (add)="onAddFinancialItem($event)"
+    (update)="onUpdateFinancialItem($event)"
+    (delete)="onDeleteFinancialItem($event)"
+    [collection]="financialItems">
+  </app-financial-section>
+</div>
