@@ -3,11 +3,11 @@ import { FinancialItem } from '../../../models/financial-item';
 import  financialType  from '../../../models/financial-type';
 
 @Component({
-  selector: 'app-financial-section',
-  templateUrl: './financial-section.component.html',
-  styleUrls: ['./financial-section.component.css']
+  selector: 'app-financial-list',
+  templateUrl: './financial-list.component.html',
+  styleUrls: ['./financial-list.component.css']
 })
-export class FinancialSectionComponent implements OnInit {
+export class FinancialListComponent implements OnInit {
   @Input() name: string;
   @Input() collection: FinancialItem[] = [];
   @Output() add: EventEmitter<any> = new EventEmitter();
@@ -47,8 +47,8 @@ export class FinancialSectionComponent implements OnInit {
     this.add.emit(new FinancialItem());
   }
 
-  updateItem(value: any, type: financialType, index: number) {
-    this.update.emit({index, type, value});
+  updateItem(index: number) {
+    this.update.emit(this.collection[index]);
   }
 
   deleteItem(index: number) {

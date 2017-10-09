@@ -11,7 +11,8 @@ import { MenuComponent } from './components/common/menu/menu.component';
 
 import { financialListReducer } from './store/financial-list';
 import { FinancialSurveyComponent } from './components/financial-survey/financial-survey.component';
-import { FinancialSectionComponent } from './components/financial-survey/financial-section/financial-section.component';
+import { FinancialListComponent } from './components/financial-survey/financial-list/financial-list.component';
+import { FinancialStatementComponent } from './components/financial-statement/financial-statement.component';
 
 let routes = [
   { path: '', redirectTo: 'survey', pathMatch: 'full' },
@@ -21,9 +22,10 @@ let routes = [
 @NgModule({
   declarations: [
     AppComponent,
-    FinancialSurveyComponent,
-    FinancialSectionComponent,
     MenuComponent,
+    FinancialSurveyComponent,
+    FinancialListComponent,
+    FinancialStatementComponent,
   ],
   imports: [
     BrowserModule,

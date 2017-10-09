@@ -11,21 +11,22 @@
         <label class="pr2" for="name">Name</label>
         <input class="input-reset flex-auto ba b--black-20 pa2 db"
           [(ngModel)]="item.name"
-          (ngModelChange)="updateItem($event, 'name', i)"
+          (ngModelChange)="updateItem(i)"
           placeholder="name">
       </div>
       <div class="flex-auto flex flex-row items-center pr5">
-        <label class="pr2" for="value">Value</label>
+        <label class="pr2" for="value">Amount</label>
         <input class="input-reset flex-auto ba b--black-20 pa2 db"
+          type="number"
           [(ngModel)]="item.value"
-          (ngModelChange)="updateItem($event, 'value', i)"
+          (ngModelChange)="updateItem(i)"
           placeholder="value">
       </div>
       <div class="flex-auto flex flex-row items-center pr5">
         <label class="pr2" for="type">Type</label>
         <select class="input-reset flex-auto ba b--black-20 pa2 db"
           [(ngModel)]="item.type"
-          (ngModelChange)="updateItem($event, 'type', i)"
+          (ngModelChange)="updateItem(i)"
           placeholder="type">
           <option *ngFor="let option of typeOptions" value="{{option.value}}">{{option.label}}</option>
         </select>

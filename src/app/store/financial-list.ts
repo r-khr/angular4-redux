@@ -4,9 +4,9 @@ import uuidv4 from 'uuid/v4';
 const defaultState: FinancialItem[] = [
     {
         uuid: uuidv4(),
-        name: 'Cash',
-        value: 1000,
-        type: 'asset'
+        name: 'Utilities',
+        value: 200,
+        type: 'expense'
     },
     {
         uuid: uuidv4(),
